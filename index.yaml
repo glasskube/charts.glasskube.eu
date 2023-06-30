@@ -1,0 +1,39 @@
+apiVersion: v1
+entries:
+  glasskube-operator:
+  - apiVersion: v2
+    appVersion: 0.6.2
+    created: "2023-06-30T12:30:46.301438761Z"
+    dependencies:
+    - condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: 1.11.1
+    - condition: kube-prometheus-stack.enabled
+      name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 45.25.0
+    - condition: mariadb-operator.enabled
+      name: mariadb-operator
+      repository: https://mariadb-operator.github.io/mariadb-operator
+      version: 0.15.1
+    - condition: cloudnative-pg.enabled
+      name: cloudnative-pg
+      repository: https://cloudnative-pg.io/charts/
+      version: 0.18.0
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.7
+    description: Glasskube Operator Helm Chart
+    digest: e24d75824999a50887979071c0fbf0025354be6b3750e6fea9e1ed180af3dd93
+    home: https://glasskube.eu/
+    icon: https://raw.githubusercontent.com/glasskube/.github/main/images/glasskube-icon.svg
+    name: glasskube-operator
+    sources:
+    - https://github.com/glasskube/operator/
+    type: application
+    urls:
+    - https://charts.glasskube.eu/glasskube-operator-0.6.2.tgz
+    version: 0.6.2
+generated: "2023-06-30T12:30:46.221659576Z"
