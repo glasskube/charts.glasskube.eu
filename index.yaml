@@ -2,6 +2,59 @@ apiVersion: v1
 entries:
   glasskube-operator:
   - apiVersion: v2
+    appVersion: 0.12.1
+    created: "2023-10-04T09:30:52.525340208Z"
+    dependencies:
+    - condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.13.1
+    - condition: kube-prometheus-stack.enabled
+      name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 51.2.0
+    - condition: mariadb-operator.enabled
+      name: mariadb-operator
+      repository: https://mariadb-operator.github.io/mariadb-operator
+      version: 0.20.0
+    - condition: cloudnative-pg.enabled
+      name: cloudnative-pg
+      repository: https://cloudnative-pg.io/charts/
+      version: 0.18.2
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.14
+    description: 'The Glasskube Operator is an open source Kubernetes operator that
+      aims to simplify the deployment and maintenance of various popular open source
+      tools. Each tool is represented by a new Kubernetes custom resource definition
+      (CRD) and most user-facing configuration parameters are available via that CRD.
+      Our philosophy is to emphasize ease-of-use and strong defaults over rich configuration.
+      Our configurations are designed to cover as many use-cases as possible with
+      minimal user configuration. '
+    digest: 3070c77b6dcfe16b5aea2740fdc103b91a8bc3d8a979d650e2d0c258f498c6cd
+    home: https://glasskube.eu/
+    icon: https://raw.githubusercontent.com/glasskube/.github/main/images/glasskube-icon.svg
+    keywords:
+    - Glasskube
+    - Gitea Operator
+    - GitLab Operator
+    - GlitchTip Operator
+    - Keycloak Operator
+    - Matomo Operator
+    - Metabase Operator
+    - Nextcloud Operator
+    - Odoo Operator
+    - HashiCorp Vault Operator
+    name: glasskube-operator
+    sources:
+    - https://github.com/glasskube/operator/
+    - https://glasskube.eu/docs/
+    type: application
+    urls:
+    - https://charts.glasskube.eu/glasskube-operator-0.12.1.tgz
+    version: 0.12.1
+  - apiVersion: v2
     appVersion: 0.10.12
     created: "2023-09-04T09:56:59.179007737Z"
     dependencies:
@@ -177,4 +230,4 @@ entries:
     urls:
     - https://charts.glasskube.eu/glasskube-operator-0.6.2.tgz
     version: 0.6.2
-generated: "2023-09-04T09:56:59.134345112Z"
+generated: "2023-10-04T09:30:52.481474174Z"
