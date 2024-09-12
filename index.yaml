@@ -283,4 +283,44 @@ entries:
     urls:
     - https://charts.glasskube.eu/glasskube-operator-0.6.2.tgz
     version: 0.6.2
-generated: "2023-10-12T09:53:22.174102276Z"
+  temporal:
+  - apiVersion: v2
+    appVersion: 1.25.0
+    created: "2024-09-12T10:42:31.056999982Z"
+    dependencies:
+    - condition: cassandra.enabled
+      name: cassandra
+      repository: https://charts.helm.sh/incubator
+      version: 0.14.3
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 25.22.0
+    - condition: elasticsearch.enabled
+      name: elasticsearch
+      repository: https://helm.elastic.co
+      version: 7.17.3
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 8.0.2
+    description: Temporal is a distributed, scalable, durable, and highly available
+      orchestration engine to execute asynchronous long-running business logic in
+      a scalable and resilient way.
+    digest: 757d541c02d3bfe12ba0d23c167892bea7d19e387b59a2398900e2fa62bff928
+    home: https://temporal.io/
+    keywords:
+    - temporal
+    - workflow
+    - orchestration
+    maintainers:
+    - name: temporalio
+      url: https://temporal.io/
+    name: temporal
+    sources:
+    - https://github.com/temporalio/temporal
+    type: application
+    urls:
+    - https://charts.glasskube.eu/temporal-0.45.2-gk.1.tgz
+    version: 0.45.2-gk.1
+generated: "2024-09-12T10:42:31.042864975Z"
